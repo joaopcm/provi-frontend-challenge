@@ -10,7 +10,8 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardTitle = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 1px solid ${colors.grey};
 `;
 

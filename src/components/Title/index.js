@@ -10,10 +10,6 @@ const Title = styled.div`
   div {
     display: flex;
     align-items: center;
-
-    button {
-      margin-right: 16px;
-    }
   }
 `;
 

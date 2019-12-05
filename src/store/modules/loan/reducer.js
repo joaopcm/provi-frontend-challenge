@@ -2,7 +2,6 @@ import produce from 'immer';
 
 const INITIAL_STATE = {
   installments: [],
-  UserId: null,
   amountTake: null,
   amountPayd: null,
   monthlyInterest: null,
@@ -11,21 +10,32 @@ const INITIAL_STATE = {
 };
 
 export default function loan(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case '@loan/ADD_SUCCESS':
-      return produce(state, draft => {
-        // ...
-      });
-    case '@loan/REMOVE':
-      return produce(state, draft => {
-        // ...
-      });
-    case '@loan/UPDATE_AMOUNT_SUCCESS': {
-      return produce(state, draft => {
-        // ...
-      });
+  return produce(state, draft => {
+    switch (action.type) {
+      case '@loan/LOAD_REQUEST': {
+        draft.loading = true;
+
+        break;
+      }
+
+      case '@loan/LOAD_SUCCESS': {
+        draft.installments = action.payload.installments;
+        draft.amountTake = action.payload.amountTake;
+        draft.amountPayd = action.payload.amountPayd;
+        draft.monthlyInterest = action.payload.monthlyInterest;
+        draft.totalAmountInTaxes = action.payload.totalAmountInTaxes;
+        draft.loading = false;
+
+        break;
+      }
+
+      case '@loan/LOAD_FAILURE': {
+        draft.loading = false;
+
+        break;
+      }
+
+      default:
     }
-    default:
-      return state;
-  }
+  });
 }

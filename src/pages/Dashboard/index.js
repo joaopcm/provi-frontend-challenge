@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdRefresh } from 'react-icons/md';
 
@@ -12,11 +12,16 @@ import { Content } from './styles';
 import { loadRequest } from '~/store/modules/loan/actions';
 
 export default function Dashboard() {
+  const dispatch = useDispatch();
   const loading = useSelector(state => state.loan.loading);
 
-  function loadLoans() {
-    // useDispatch(loadRequest());
-  }
+  const loadLoans = useCallback(() => {
+    dispatch(loadRequest());
+  }, []); // eslint-disable-line
+
+  useEffect(() => {
+    loadLoans();
+  }, [loadLoans]);
 
   return (
     <Container>

@@ -11,7 +11,7 @@ export function loadSuccess(payload) {
   };
 }
 
-export function loadFailued() {
+export function loadFailure() {
   return {
     type: '@loan/LOAD_FAILURE',
   };
