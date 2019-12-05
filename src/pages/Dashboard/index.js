@@ -34,6 +34,7 @@ export default function Dashboard() {
             text={loading ? 'CARREGANDO...' : 'RECARREGAR'}
             icon={MdRefresh}
             onClick={loadLoans}
+            disabled={loading}
           />
         </div>
       </Title>
