@@ -8,7 +8,7 @@ export default function Header() {
     <Container>
       <nav>
         <h1>Provi</h1>
-        <Link to="/dashboard">DASHBOARD</Link>
+        <Link to="/">DASHBOARD</Link>
       </nav>
 
       <aside>
