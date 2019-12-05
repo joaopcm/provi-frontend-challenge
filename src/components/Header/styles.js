@@ -52,7 +52,7 @@ export const Profile = styled.div`
       color: ${colors.white};
     }
 
-    span {
+    a {
       display: block;
       margin-top: 2px;
       font-size: 12px;

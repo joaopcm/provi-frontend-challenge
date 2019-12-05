@@ -15,7 +15,7 @@ export default function Header() {
         <Profile>
           <div>
             <strong>João Melo</strong>
-            <span>MEU PERFIL</span>
+            <Link to="/profile">MEU PERFIL</Link>
           </div>
           <img
             src="https://api.adorable.io/avatars/285/jopcmelo@gmail.com"
