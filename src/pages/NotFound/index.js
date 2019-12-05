@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MdHome } from 'react-icons/md';
+import { MdArrowBack } from 'react-icons/md';
 
 import Container from '~/components/Container';
 import Title from '~/components/Title';
@@ -26,7 +26,7 @@ export default function NotFound() {
           </p>
 
           <Link to="/">
-            <Button text="VOLTAR PARA CASA" icon={MdHome} />
+            <Button text="VOLTAR PARA CASA" icon={MdArrowBack} />
           </Link>
         </div>
 
