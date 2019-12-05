@@ -1,7 +1,7 @@
 export default {
   white: '#fff',
   grey: '#ddd',
-  primary: '#ee4d64',
+  primary: '#6858bb',
   secondary: '#f5f5f5',
   danger: '#de3b3b',
   info: '#4d85ee',
