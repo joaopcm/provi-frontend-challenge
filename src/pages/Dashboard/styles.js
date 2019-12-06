@@ -5,3 +5,10 @@ export const Content = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
 `;
+
+export const LoadingLine = styled.div`
+  width: 50%;
+  height: 16px;
+  align-self: center;
+  border-radius: 8px;
+`;
