@@ -15,4 +15,8 @@ export const CardTitle = styled.div`
   border-bottom: 1px solid ${colors.grey};
 `;
 
-export const CardBody = styled.div``;
+export const CardBody = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

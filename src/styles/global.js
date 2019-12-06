@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import colors from './colors';
+import background from '~/assets/background.png';
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
@@ -17,6 +18,9 @@ export default createGlobalStyle`
 
   html, body, #root {
     height: 100%;
+    background: ${colors.secondary} url(${background}) no-repeat center center
+    fixed;
+    background-size: cover;
   }
 
   body {

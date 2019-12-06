@@ -20,7 +20,7 @@ export default function loan(state = INITIAL_STATE, action) {
 
       case '@loan/LOAD_SUCCESS': {
         draft.installments = action.payload.installments;
-        draft.amountTake = action.payload.amountTake;
+        draft.amountTaken = action.payload.amountTaken;
         draft.amountPayd = action.payload.amountPayd;
         draft.monthlyInterest = action.payload.monthlyInterest;
         draft.totalAmountInTaxes = action.payload.totalAmountInTaxes;
